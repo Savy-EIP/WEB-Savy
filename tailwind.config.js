@@ -5,14 +5,15 @@ export default {
 		extend: {
 			colors: {
 				svBack: '#181818',
+				svBack95: '#18181895',
 			},
 			keyframes: {
 				colorChange: {
-          '0%': { color: '#FFFFFF' },
+					'0%': { color: '#FFFFFF' },
 					'26%': { color: '#DABAFF' },
 					'50%': { color: '#9C44FF' },
 					'75%': { color: '#DABAFF' },
-          '100%': { color: '#FFFFFF'},
+					'100%': { color: '#FFFFFF' },
 				},
 			},
 		},
