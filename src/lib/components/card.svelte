@@ -4,7 +4,7 @@
 </script>
 
 <div>
-	<div class="bg-svBack p-3 rounded-xl w-full animated-border">
+	<div class="bg-svBack p-3 rounded-xl w-96 animated-border">
 		<h1 class="text-4xl pb-2">{name}</h1>
 		<hr />
 		<h2 class="text-2xl pt-2">{job}</h2>

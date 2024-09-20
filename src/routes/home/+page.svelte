@@ -19,6 +19,7 @@
 
 {#if showContent}
 	<div transition:fade>
+		<!-- Navbar -->
 		<div class=" fixed w-full p-4 z-10">
 			<div class="flex flex-row items-center p-4 bg-svBack95 rounded-xl">
 				<a href="/" class="w-1/5">
@@ -32,16 +33,23 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Home content -->
 		<div id="home" class="flex w-full h-screen justify-center items-center">
 			<h1 class="text-4xl">WORK IN PROGRESS</h1>
 		</div>
+
+		<!-- Project content -->
 		<div id="project" class="flex w-full h-screen justify-center items-center">
 			<div class="flex">
 				<h1 class="text-4xl pr-4">PROJECT</h1>
 				<LogoAnimated ratio={0.5} />
 			</div>
 		</div>
-		<div id="team" class="flex w-full h-screen justify-center items-center">
+
+		<!-- Team content -->
+		<div id="team" class="flex flex-col w-full h-screen justify-center items-center">
+			<h1 class="text-5xl underline mb-24">TEAM</h1>
 			<div class="flex flex-wrap w-screen gap-y-8">
 				<div class="flex justify-center w-1/3">
 					<Card name={'Luca Deltort'} job={'iOS Developer'} />
@@ -64,6 +72,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Contact content -->
 		<div id="contact" class="flex w-full h-screen justify-center items-center">
 			<a href={`mailto:${email}`} class="text-4xl">{email}</a>
 		</div>
