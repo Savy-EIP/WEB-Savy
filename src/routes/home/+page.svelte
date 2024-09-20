@@ -1,12 +1,18 @@
 <script>
-	import LogoAnimated from './../../lib/icons/logo-animated.svelte';
+	import LogoAnimated from '$lib/icons/logo-animated.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import LogoStatic from '$lib/icons/logo-static.svelte';
 	import Card from '$lib/components/card.svelte';
+	import fight from '$lib/img/savy_won_duo1.png';
 
 	let showContent = false;
+	let showFight = false;
 	const email = 'savy.eip@gmail.com';
+
+	function toggleFight() {
+		showFight = !showFight;
+	}
 
 	onMount(() => {
 		showContent = true;
@@ -36,7 +42,13 @@
 
 		<!-- Home content -->
 		<div id="home" class="flex w-full h-screen justify-center items-center">
-			<h1 class="text-4xl">WORK IN PROGRESS</h1>
+			<button class="text-4xl" on:click={toggleFight}>
+				{#if showFight}
+					<img src={fight} alt="fight" />
+				{:else}
+					WORK IN PROGRESS
+				{/if}
+			</button>
 		</div>
 
 		<!-- Project content -->
