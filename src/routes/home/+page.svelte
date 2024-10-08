@@ -1,8 +1,10 @@
 <script>
-	import LogoAnimated from '$lib/icons/logo-animated.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import LogoAnimated from '$lib/icons/logo-animated.svelte';
 	import LogoStatic from '$lib/icons/logo-static.svelte';
+	import WipEip from '$lib/icons/wip-eip.svelte';
+	import SavyDot from '$lib/icons/savy-dot.svelte';
 	import Card from '$lib/components/card.svelte';
 	import fight from '$lib/img/savy_won_duo1.png';
 
@@ -41,12 +43,12 @@
 		</div>
 
 		<!-- Home content -->
-		<div id="home" class="flex w-full h-screen justify-center items-center">
-			<button class="text-4xl" on:click={toggleFight}>
+		<div id="home" class="flex w-full h-screen justify-center items-center pulse-gradient">
+			<button class="text-4xl cursor-default" on:click={toggleFight}>
 				{#if showFight}
 					<img src={fight} alt="fight" />
 				{:else}
-					WORK IN PROGRESS
+					<WipEip />
 				{/if}
 			</button>
 		</div>
@@ -61,26 +63,41 @@
 
 		<!-- Team content -->
 		<div id="team" class="flex flex-col w-full h-screen justify-center items-center">
-			<h1 class="text-5xl underline mb-24">TEAM</h1>
-			<div class="flex flex-wrap w-screen gap-y-8">
+			<div class="flex items-baseline">
+				<h1 class="text-5xl mb-24 pr-1">TEAM</h1>
+				<SavyDot />
+			</div>
+			<div class="flex flex-wrap w-screen gap-y-8 teams">
 				<div class="flex justify-center w-1/3">
-					<Card name={'Luca Deltort'} job={'iOS Developer'} />
+					<a href="https://github.com/StEgo2103">
+						<Card name={'Luca Deltort'} job={'iOS Developer'} />
+					</a>
 				</div>
 				<div class="flex justify-center w-1/3">
-					<Card name={'Quentin Challon'} job={'Scrum Master'} />
+					<a href="https://github.com/chaquentin">
+						<Card name={'Quentin Challon'} job={'Scrum Master'} />
+					</a>
 				</div>
 				<div class="flex justify-center w-1/3">
-					<Card name={'Tom Laiolo'} job={'Android Developer'} />
+					<a href="https://github.com/yomlaiolo">
+						<Card name={'Tom Laiolo'} job={'Android Developer'} />
+					</a>
 				</div>
 
 				<div class="flex justify-center w-1/3">
-					<Card name={'Terry Mazzoni'} job={'Back-end Developer'} />
+					<a href="https://github.com/TerryMazzoni">
+						<Card name={'Terry Mazzoni'} job={'Back-end Developer'} />
+					</a>
 				</div>
 				<div class="flex justify-center w-1/3">
-					<Card name={'Christopher Artigas'} job={'AI Developer'} />
+					<a href="https://github.com/ArtigasChristopher">
+						<Card name={'Christopher Artigas'} job={'AI Developer'} />
+					</a>
 				</div>
 				<div class="flex justify-center w-1/3">
-					<Card name={'Antonin Laudon'} job={'AI Developer'} />
+					<a href="https://github.com/AntoninLaudon">
+						<Card name={'Antonin Laudon'} job={'AI Developer'} />
+					</a>
 				</div>
 			</div>
 		</div>
@@ -91,3 +108,30 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	.pulse-gradient::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle, #9c44ff 0%, #000000 20%);
+		animation: pulse 3s infinite;
+		z-index: -1;
+		border-radius: inherit;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.8);
+		}
+		50% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: scale(0.8);
+		}
+	}
+</style>
