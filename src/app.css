@@ -12,6 +12,14 @@ body {
 	scroll-behavior: smooth;
 }
 
+body {
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
 #app {
 	width: 100vw;
 	height: 100vh;
