@@ -10,14 +10,36 @@
 
 	let showContent = false;
 	let showFight = false;
+	let ratioSavyLogo = 0.5;
+	let ratioWIP = 1;
 	const email = 'savy.eip@gmail.com';
 
 	function toggleFight() {
 		showFight = !showFight;
 	}
 
+	function updateRatio() {
+		const width = window.innerWidth;
+		if (width < 640) {
+			ratioSavyLogo = 0.5;
+			ratioWIP = 0.5;
+		} else if (width >= 2560 && width < 3840) {
+			ratioSavyLogo = 0.75;
+			ratioWIP = 1.5;
+		} else if (width >= 3840) {
+			ratioSavyLogo = 1;
+			ratioWIP = 2;
+		} else {
+			ratioSavyLogo = 0.5;
+			ratioWIP = 1;
+		}
+	}
+
 	onMount(() => {
 		showContent = true;
+		updateRatio();
+		window.addEventListener('resize', updateRatio);
+		return () => window.removeEventListener('resize', updateRatio);
 	});
 
 	onDestroy(() => {
@@ -28,16 +50,22 @@
 {#if showContent}
 	<div transition:fade>
 		<!-- Navbar -->
-		<div class=" fixed w-full p-4 z-10">
+		<div class="fixed w-full p-4 z-10">
 			<div class="flex flex-row items-center p-4 bg-svBack95 rounded-xl">
-				<a href="/" class="w-1/5">
-					<LogoStatic ratio={0.5} />
+				<a href="/" class="flex w-1/4 justify-center mb-4 4k:mb-6">
+					<LogoStatic ratio={ratioSavyLogo} />
 				</a>
-				<div class="flex flex-row justify-around w-3/5">
-					<a href="#home" class="text-xl hover:animate-colorChange">Home</a>
-					<a href="#project" class="text-xl hover:animate-colorChange">Project</a>
-					<a href="#team" class="text-xl hover:animate-colorChange">Team</a>
-					<a href="#contact" class="text-xl hover:animate-colorChange">Contact</a>
+				<div class="flex flex-col md:flex-row justify-center md:justify-around w-2/4 space-y-2 md:space-y-0">
+					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Home</a
+					>
+					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange"
+						>Project</a
+					>
+					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Team</a
+					>
+					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange"
+						>Contact</a
+					>
 				</div>
 			</div>
 		</div>
@@ -48,7 +76,7 @@
 				{#if showFight}
 					<img src={fight} alt="fight" />
 				{:else}
-					<WipEip />
+					<WipEip ratio={ratioWIP} />
 				{/if}
 			</button>
 		</div>
@@ -110,6 +138,11 @@
 {/if}
 
 <style>
+	.pulse-gradient {
+		position: relative;
+		overflow: hidden;
+		border-radius: inherit;
+	}
 	.pulse-gradient::before {
 		content: '';
 		position: absolute;

@@ -1,4 +1,8 @@
-<svg width="693" height="112" viewBox="0 0 693 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+	export let ratio = 1;
+</script>
+
+<svg width={693 * ratio} height={112 * ratio} viewBox="0 0 693 112" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M68.0779 0.825185H83.2613L67.0876 51.3266H50.9965L41.5894 24.5905L32.3473 51.3266H16.2562L0 0.825185H15.1834L24.343 29.8717L34.2452 1.40282H49.0161L59.0833 29.8717L68.0779 0.825185Z"
 		fill="white"

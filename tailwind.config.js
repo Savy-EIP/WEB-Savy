@@ -16,6 +16,10 @@ export default {
 					'100%': { color: '#FFFFFF' },
 				},
 			},
+			screens: {
+				'2k': '2048px',
+				'4k': '3840px',
+			},
 		},
 		animation: {
 			colorChange: 'colorChange 1.5s ease-in-out infinite',
