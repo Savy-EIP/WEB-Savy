@@ -51,21 +51,17 @@
 	<div transition:fade>
 		<!-- Navbar -->
 		<div class="fixed w-full p-4 z-10">
-			<div class="flex flex-row items-center p-4 bg-svBack95 rounded-xl">
-				<a href="/" class="flex w-1/4 justify-center mb-4 4k:mb-6">
+			<div class="flex flex-col md:flex-row justify-center md:justify-normal items-center p-4 bg-svBack95 rounded-xl">
+				<a href="/" class="flex w-1/4 justify-center">
 					<LogoStatic ratio={ratioSavyLogo} />
 				</a>
-				<div class="flex flex-col md:flex-row justify-center md:justify-around w-2/4 space-y-2 md:space-y-0">
-					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Home</a
+				<div class="flex md:flex-row justify-around w-full md:w-2/4 space-y-2 md:space-y-0 space-x-2 md:space-x-0">
+					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl equilibrate hover:animate-colorChange"
+						>Home</a
 					>
-					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange"
-						>Project</a
-					>
-					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Team</a
-					>
-					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange"
-						>Contact</a
-					>
+					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Project</a>
+					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Team</a>
+					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -84,45 +80,44 @@
 		<!-- Project content -->
 		<div id="project" class="flex w-full h-screen justify-center items-center">
 			<div class="flex">
-				<h1 class="text-4xl pr-4">PROJECT</h1>
-				<LogoAnimated ratio={0.5} />
+				<h1 class="text-4xl 2k:text-5xl 4k:text-6xl pr-4">PROJECT</h1>
+				<LogoAnimated ratio={ratioSavyLogo} />
 			</div>
 		</div>
 
 		<!-- Team content -->
 		<div id="team" class="flex flex-col w-full h-screen justify-center items-center">
 			<div class="flex items-baseline">
-				<h1 class="text-5xl mb-24 pr-1">TEAM</h1>
-				<SavyDot />
+				<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">TEAM</h1>
+				<SavyDot ratio={ratioWIP} />
 			</div>
-			<div class="flex flex-wrap w-screen gap-y-8 teams">
-				<div class="flex justify-center w-1/3">
+			<div class="flex flex-wrap w-screen gap-y-4 md:gap-y-8 2k:gap-y-16 4k:gap-y-32">
+				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/StEgo2103">
 						<Card name={'Luca Deltort'} job={'iOS Developer'} />
 					</a>
 				</div>
-				<div class="flex justify-center w-1/3">
-					<a href="https://github.com/chaquentin">
-						<Card name={'Quentin Challon'} job={'Scrum Master'} />
-					</a>
-				</div>
-				<div class="flex justify-center w-1/3">
+				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/yomlaiolo">
 						<Card name={'Tom Laiolo'} job={'Android Developer'} />
 					</a>
 				</div>
-
-				<div class="flex justify-center w-1/3">
+				<div class="flex justify-center w-full md:w-1/3">
+					<a href="https://github.com/chaquentin">
+						<Card name={'Quentin Challon'} job={'Scrum Master'} />
+					</a>
+				</div>
+				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/TerryMazzoni">
 						<Card name={'Terry Mazzoni'} job={'Back-end Developer'} />
 					</a>
 				</div>
-				<div class="flex justify-center w-1/3">
+				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/ArtigasChristopher">
 						<Card name={'Christopher Artigas'} job={'AI Developer'} />
 					</a>
 				</div>
-				<div class="flex justify-center w-1/3">
+				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/AntoninLaudon">
 						<Card name={'Antonin Laudon'} job={'AI Developer'} />
 					</a>
@@ -132,7 +127,7 @@
 
 		<!-- Contact content -->
 		<div id="contact" class="flex w-full h-screen justify-center items-center">
-			<a href={`mailto:${email}`} class="text-4xl">{email}</a>
+			<a href={`mailto:${email}`} class="text-4xl 2k:text-5xl 4k:text-6xl">{email}</a>
 		</div>
 	</div>
 {/if}
@@ -165,6 +160,20 @@
 		}
 		100% {
 			transform: scale(0.8);
+		}
+	}
+
+	.equilibrate {
+		--tw-space-y-reverse: 0;
+		margin-top: calc(0.5rem /* 8px */ * calc(1 - var(--tw-space-y-reverse)));
+		margin-bottom: calc(0.5rem /* 8px */ * var(--tw-space-y-reverse));
+	}
+
+	@media (min-width: 768px) {
+		.equilibrate {
+			--tw-space-y-reverse: 0;
+			margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+			margin-bottom: calc(0px * var(--tw-space-y-reverse));
 		}
 	}
 </style>

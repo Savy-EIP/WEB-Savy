@@ -4,10 +4,10 @@
 </script>
 
 <div>
-	<div class="bg-svBack p-3 rounded-xl w-96 animated-border">
-		<h1 class="text-4xl pb-2">{name}</h1>
+	<div class="bg-svBack p-3 rounded-xl w-64 md:w-96 w-128 w-256 animated-border">
+		<h1 class="text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8">{name}</h1>
 		<hr />
-		<h2 class="text-2xl pt-2">{job}</h2>
+		<h2 class="text-xl md:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8">{job}</h2>
 	</div>
 </div>
 
@@ -34,5 +34,17 @@
 	.animated-border:hover::before {
 		left: 0;
 		background-position: -100% 0;
+	}
+
+	@media (min-width: 2048px) {
+		.w-128 {
+			width: 32rem;
+		}
+	}
+
+	@media (min-width: 3840px) {
+		.w-256 {
+			width: 64rem;
+		}
 	}
 </style>
