@@ -50,18 +50,18 @@
 {#if showContent}
 	<div transition:fade>
 		<!-- Navbar -->
-		<div class="fixed w-full p-4 z-10">
-			<div class="flex flex-col md:flex-row justify-center md:justify-normal items-center p-4 bg-svBack95 rounded-xl">
+		<div class="fixed w-full p-2 md:p-4 z-50">
+			<div
+				class="flex flex-col md:flex-row justify-center md:justify-normal items-center p-4 bg-svBack md:bg-svBack95 rounded-xl header"
+			>
 				<a href="/" class="flex w-1/4 justify-center">
 					<LogoStatic ratio={ratioSavyLogo} />
 				</a>
 				<div class="flex md:flex-row justify-around w-full md:w-2/4 space-y-2 md:space-y-0 space-x-2 md:space-x-0">
-					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl equilibrate hover:animate-colorChange"
-						>Home</a
-					>
-					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Project</a>
-					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Team</a>
-					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl hover:animate-colorChange">Contact</a>
+					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl equilibrate">Home</a>
+					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Project</a>
+					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Team</a>
+					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 		</div>
 
 		<!-- Team content -->
-		<div id="team" class="flex flex-col w-full h-screen justify-center items-center">
+		<div id="team" class="flex flex-col w-full h-auto md:h-screen justify-center items-center pt-44 md:pt-0">
 			<div class="flex items-baseline">
 				<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">TEAM</h1>
 				<SavyDot ratio={ratioWIP} />
@@ -162,7 +162,9 @@
 			transform: scale(0.8);
 		}
 	}
-
+	.header a:active {
+		transform: scale(0.95);
+	}
 	.equilibrate {
 		--tw-space-y-reverse: 0;
 		margin-top: calc(0.5rem /* 8px */ * calc(1 - var(--tw-space-y-reverse)));
@@ -170,6 +172,34 @@
 	}
 
 	@media (min-width: 768px) {
+		.header a {
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.header a:hover {
+			transform: scale(1.05);
+		}
+
+		.header a::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -2px;
+			width: 100%;
+			height: 2px;
+			background-color: currentColor;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.header a:hover::after {
+			transform: scaleX(1);
+		}
+
 		.equilibrate {
 			--tw-space-y-reverse: 0;
 			margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));

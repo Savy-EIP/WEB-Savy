@@ -12,28 +12,34 @@
 </div>
 
 <style>
-	.animated-border {
-		position: relative;
-		overflow: hidden;
+	.animated-border:active {
+		transform: scale(0.95);
 	}
 
-	.animated-border::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -10%;
-		width: 110%;
-		height: 100%;
-		border: 2px solid transparent;
-		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #9b44ff53 100%);
-		background-size: 200% 100%;
-		z-index: 0;
-		transition: background-position 0.5s;
-	}
+	@media (min-width: 768px) {
+		.animated-border {
+			position: relative;
+			overflow: hidden;
+		}
 
-	.animated-border:hover::before {
-		left: 0;
-		background-position: -100% 0;
+		.animated-border::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -10%;
+			width: 110%;
+			height: 100%;
+			border: 2px solid transparent;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, #9b44ff53 100%);
+			background-size: 200% 100%;
+			z-index: 0;
+			transition: background-position 0.5s;
+		}
+
+		.animated-border:hover::before {
+			left: 0;
+			background-position: -100% 0;
+		}
 	}
 
 	@media (min-width: 2048px) {
