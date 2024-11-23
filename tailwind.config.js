@@ -15,6 +15,17 @@ export default {
 					'75%': { color: '#DABAFF' },
 					'100%': { color: '#FFFFFF' },
 				},
+				'shine-pulse': {
+					'0%': {
+						'background-position': '0% 0%',
+					},
+					'50%': {
+						'background-position': '100% 100%',
+					},
+					to: {
+						'background-position': '0% 0%',
+					},
+				},
 			},
 			screens: {
 				mb: '375px',

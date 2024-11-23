@@ -7,6 +7,7 @@
 	import SavyDot from '$lib/icons/savy-dot.svelte';
 	import Card from '$lib/components/card.svelte';
 	import fight from '$lib/img/savy_won_duo1.png';
+	import ShineBorder from '$lib/components/shine-border.svelte';
 
 	let showContent = false;
 	let showFight = false;
@@ -114,7 +115,7 @@
 				</div>
 				<div class="flex justify-center w-full md:w-1/3">
 					<a href="https://github.com/ArtigasChristopher">
-						<Card name={'Christopher Artigas'} job={'AI Developer'} />
+						<Card name={'Christopher Artigas'} job={'Product Owner & AI Developer'} />
 					</a>
 				</div>
 				<div class="flex justify-center w-full md:w-1/3">
