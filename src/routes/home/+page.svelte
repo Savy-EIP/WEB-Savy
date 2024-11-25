@@ -7,7 +7,8 @@
 	import SavyDot from '$lib/icons/savy-dot.svelte';
 	import Card from '$lib/components/card.svelte';
 	import fight from '$lib/img/savy_won_duo1.png';
-	import ShineBorder from '$lib/components/shine-border.svelte';
+	import Github from '$lib/icons/github.svg';
+	import BowReveal from '$lib/components/bow-reveal.svelte';
 
 	let showContent = false;
 	let showFight = false;
@@ -58,7 +59,9 @@
 				<a href="/" class="flex w-1/4 justify-center">
 					<LogoStatic ratio={ratioSavyLogo} />
 				</a>
-				<div class="flex md:flex-row justify-around w-full md:w-2/4 space-y-2 md:space-y-0 space-x-2 md:space-x-0">
+				<div
+					class="flex md:flex-row justify-around w-full md:w-2/4 space-y-2 md:space-y-0 space-x-2 md:space-x-0 tab"
+				>
 					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl equilibrate">Home</a>
 					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Project</a>
 					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Team</a>
@@ -79,56 +82,112 @@
 		</div>
 
 		<!-- Project content -->
-		<div id="project" class="flex w-full h-screen justify-center items-center">
-			<div class="flex">
-				<h1 class="text-4xl 2k:text-5xl 4k:text-6xl pr-4">PROJECT</h1>
-				<LogoAnimated ratio={ratioSavyLogo} />
+		<div id="project" class="flex w-full justify-center items-center">
+			<div class="flex flex-col justify-center items-center mt-32">
+				<BowReveal>
+					<div class="flex pb-8">
+						<h1 class="text-4xl 2k:text-5xl 4k:text-6xl pr-4">PROJECT</h1>
+						<LogoAnimated ratio={ratioSavyLogo} />
+					</div>
+				</BowReveal>
+				<div class="flex flex-col gap-y-8 mx-8 md:mx-20">
+					<BowReveal>
+						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">What is SAVY?</h4>
+						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
+							Savy is a language learning solution powered with <strong class="text-svPurple"
+								>artificial intelligence (AI)</strong
+							>
+							. Our aim is to simulate as much of the environment as possible for maximum written and
+							spoken interaction with different
+							<strong class="text-svPurple">Echos (AI)</strong> where they have mulitples accents
+							and personalities. We offer lessons or discussions to perfect your language. All this
+							will be supervised by your <strong class="text-svPurple">SAVY assistant</strong>, who
+							will personalize your course and correct any errors in spelling, syntax, meaning,
+							pronunciation...
+						</p>
+					</BowReveal>
+					<BowReveal>
+						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">Why SAVY?</h4>
+						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
+							Based on the word "savvy" which means "<strong class="text-svPurple"
+								>knowledgeable</strong
+							>", we remove the "v" to make it a unique name for the application and the assistant,
+							easy to remember and pronounce
+						</p>
+					</BowReveal>
+					<BowReveal>
+						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">Who are the Echos?</h4>
+						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
+							The Echos are the AI that you will interact with. They are each <strong
+								class="text-svPurple">unique</strong
+							>
+							and have their
+							<strong class="text-svPurple">own personality</strong>, accent and 3D model.
+						</p>
+					</BowReveal>
+				</div>
 			</div>
 		</div>
 
 		<!-- Team content -->
-		<div id="team" class="flex flex-col w-full h-auto md:h-screen justify-center items-center pt-44 md:pt-0">
-			<div class="flex items-baseline">
-				<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">TEAM</h1>
-				<SavyDot ratio={ratioWIP} />
-			</div>
-			<div class="flex flex-wrap w-screen gap-y-4 md:gap-y-8 2k:gap-y-16 4k:gap-y-32">
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/StEgo2103">
-						<Card name={'Luca Deltort'} job={'iOS Developer'} />
-					</a>
+		<div
+			id="team"
+			class="flex flex-col w-full h-auto md:h-screen justify-center items-center pt-44 md:pt-0"
+		>
+			<BowReveal>
+				<div class="flex items-baseline">
+					<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">
+						TEAM
+					</h1>
+					<SavyDot ratio={ratioWIP} />
 				</div>
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/yomlaiolo">
-						<Card name={'Tom Laiolo'} job={'Android Developer'} />
-					</a>
+			</BowReveal>
+			<BowReveal>
+				<div class="flex flex-wrap w-screen gap-y-4 md:gap-y-8 2k:gap-y-16 4k:gap-y-32">
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/StEgo2103">
+							<Card name={'Luca Deltort'} job={'iOS Developer'} />
+						</a>
+					</div>
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/yomlaiolo">
+							<Card name={'Tom Laiolo'} job={'Android Developer'} />
+						</a>
+					</div>
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/chaquentin">
+							<Card name={'Quentin Challon'} job={'Scrum Master'} />
+						</a>
+					</div>
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/TerryMazzoni">
+							<Card name={'Terry Mazzoni'} job={'Back-end Developer'} />
+						</a>
+					</div>
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/ArtigasChristopher">
+							<Card name={'Christopher Artigas'} job={'Product Owner & AI Developer'} />
+						</a>
+					</div>
+					<div class="flex justify-center w-full md:w-1/3">
+						<a href="https://github.com/AntoninLaudon">
+							<Card name={'Antonin Laudon'} job={'AI Developer'} />
+						</a>
+					</div>
 				</div>
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/chaquentin">
-						<Card name={'Quentin Challon'} job={'Scrum Master'} />
-					</a>
-				</div>
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/TerryMazzoni">
-						<Card name={'Terry Mazzoni'} job={'Back-end Developer'} />
-					</a>
-				</div>
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/ArtigasChristopher">
-						<Card name={'Christopher Artigas'} job={'Product Owner & AI Developer'} />
-					</a>
-				</div>
-				<div class="flex justify-center w-full md:w-1/3">
-					<a href="https://github.com/AntoninLaudon">
-						<Card name={'Antonin Laudon'} job={'AI Developer'} />
-					</a>
-				</div>
-			</div>
+			</BowReveal>
 		</div>
 
+		<div class="w-auto h-1 mt-10 md:mt-0 bg-svPurple bg-opacity-70 mx-10"></div>
 		<!-- Contact content -->
-		<div id="contact" class="flex w-full h-screen justify-center items-center">
-			<a href={`mailto:${email}`} class="text-4xl 2k:text-5xl 4k:text-6xl">{email}</a>
+		<div
+			id="contact"
+			class="flex flex-col md:flex-row w-full h-52 justify-center items-center gap-y-16 md:gap-y-0 md:gap-x-16 contact"
+		>
+			<a href={`mailto:${email}`} class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl">{email}</a>
+			<a href="https://github.com/Savy-EIP" target="_blank">
+				<img src={Github} alt="github logo" class="h-8 w-8" />
+			</a>
 		</div>
 	</div>
 {/if}
@@ -163,7 +222,7 @@
 			transform: scale(0.8);
 		}
 	}
-	.header a:active {
+	.tab a:active {
 		transform: scale(0.95);
 	}
 	.equilibrate {
@@ -180,11 +239,11 @@
 			transition: transform 0.3s ease-in-out;
 		}
 
-		.header a:hover {
+		.tab a:hover {
 			transform: scale(1.05);
 		}
 
-		.header a::after {
+		.tab a::after {
 			content: '';
 			position: absolute;
 			left: 0;
@@ -197,7 +256,7 @@
 			transition: transform 0.3s ease-in-out;
 		}
 
-		.header a:hover::after {
+		.tab a:hover::after {
 			transform: scaleX(1);
 		}
 
@@ -205,6 +264,14 @@
 			--tw-space-y-reverse: 0;
 			margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
 			margin-bottom: calc(0px * var(--tw-space-y-reverse));
+		}
+
+		.contact a {
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.contact a:hover {
+			transform: scale(1.2);
 		}
 	}
 </style>

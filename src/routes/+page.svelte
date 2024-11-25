@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import LogoAnim from '$lib/icons/logo-animated.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -29,6 +30,24 @@
 	});
 </script>
 
-<button class="flex justify-center items-center w-screen h-screen" on:click={navigateToHome} type="button" aria-label="Navigate to Home">
+<button class="flex justify-center items-center w-screen h-screen clickon" on:click={navigateToHome} type="button" aria-label="Navigate to Home">
 	<LogoAnim {ratio} />
 </button>
+
+<style>
+	.clickon {
+		animation: scale 4s infinite;
+	}
+
+	@keyframes scale {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+</style>

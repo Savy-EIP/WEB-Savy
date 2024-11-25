@@ -6,6 +6,7 @@ export default {
 			colors: {
 				svBack: '#181818',
 				svBack95: '#18181895',
+				svPurple: '#9C44FF',
 			},
 			keyframes: {
 				colorChange: {
