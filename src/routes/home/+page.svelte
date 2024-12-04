@@ -8,7 +8,7 @@
 	import Card from '$lib/components/card.svelte';
 	import fight from '$lib/img/savy_won_duo1.png';
 	import Github from '$lib/icons/github.svg';
-	import BowReveal from '$lib/components/bow-reveal.svelte';
+	import BoxReveal from '$lib/components/box-reveal.svelte';
 
 	let showContent = false;
 	let showFight = false;
@@ -84,14 +84,14 @@
 		<!-- Project content -->
 		<div id="project" class="flex w-full justify-center items-center">
 			<div class="flex flex-col justify-center items-center mt-32">
-				<BowReveal>
+				<BoxReveal>
 					<div class="flex pb-8">
 						<h1 class="text-4xl 2k:text-5xl 4k:text-6xl pr-4">PROJECT</h1>
 						<LogoAnimated ratio={ratioSavyLogo} />
 					</div>
-				</BowReveal>
+				</BoxReveal>
 				<div class="flex flex-col gap-y-8 mx-8 md:mx-20">
-					<BowReveal>
+					<BoxReveal>
 						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">What is SAVY?</h4>
 						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
 							Savy is a language learning solution powered with <strong class="text-svPurple"
@@ -105,8 +105,8 @@
 							will personalize your course and correct any errors in spelling, syntax, meaning,
 							pronunciation...
 						</p>
-					</BowReveal>
-					<BowReveal>
+					</BoxReveal>
+					<BoxReveal>
 						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">Why SAVY?</h4>
 						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
 							Based on the word "savvy" which means "<strong class="text-svPurple"
@@ -114,8 +114,8 @@
 							>", we remove the "v" to make it a unique name for the application and the assistant,
 							easy to remember and pronounce
 						</p>
-					</BowReveal>
-					<BowReveal>
+					</BoxReveal>
+					<BoxReveal>
 						<h4 class="text-2xl md:text-4xl 2k:text-5xl 4k:text-6xl pb-4">Who are the Echos?</h4>
 						<p class="text:lg md:text-2xl 2k:text-3xl 4k:text-4xl">
 							The Echos are the AI that you will interact with. They are each <strong
@@ -124,7 +124,7 @@
 							and have their
 							<strong class="text-svPurple">own personality</strong>, accent and 3D model.
 						</p>
-					</BowReveal>
+					</BoxReveal>
 				</div>
 			</div>
 		</div>
@@ -134,15 +134,15 @@
 			id="team"
 			class="flex flex-col w-full h-auto md:h-screen justify-center items-center pt-44 md:pt-0"
 		>
-			<BowReveal>
+			<BoxReveal>
 				<div class="flex items-baseline">
 					<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">
 						TEAM
 					</h1>
 					<SavyDot ratio={ratioWIP} />
 				</div>
-			</BowReveal>
-			<BowReveal>
+			</BoxReveal>
+			<BoxReveal>
 				<div class="flex flex-wrap w-screen gap-y-4 md:gap-y-8 2k:gap-y-16 4k:gap-y-32">
 					<div class="flex justify-center w-full md:w-1/3">
 						<a href="https://github.com/StEgo2103">
@@ -175,7 +175,7 @@
 						</a>
 					</div>
 				</div>
-			</BowReveal>
+			</BoxReveal>
 		</div>
 
 		<div class="w-auto h-1 mt-10 md:mt-0 bg-svPurple bg-opacity-70 mx-10"></div>
@@ -271,7 +271,7 @@
 		}
 
 		.contact a:hover {
-			transform: scale(1.2);
+			transform: scale(1.1);
 		}
 	}
 </style>

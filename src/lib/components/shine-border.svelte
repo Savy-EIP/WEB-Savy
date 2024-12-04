@@ -16,7 +16,7 @@
       --border-radius: {borderRadius}px;
     "
 	class={cn(
-		'relative grid min-h-[60px] w-fit min-w-[300px] place-items-center rounded-[var(--border-radius)] bg-white p-3 text-black dark:bg-black dark:text-white',
+		'relative grid min-h-[60px] w-fit min-w-[300px] place-items-center rounded-[var(--border-radius) bg-black text-white',
 		className
 	)}
 >
@@ -26,7 +26,9 @@
         --border-radius: {borderRadius}px;
         --shine-pulse-duration: {duration}s;
         --mask-linear-gradient: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        --background-radial-gradient: radial-gradient(transparent, transparent, {Array.isArray(color)
+        --background-radial-gradient: radial-gradient(transparent, transparent, {Array.isArray(
+			color
+		)
 			? color.join(',')
 			: color}, transparent, transparent);
       "

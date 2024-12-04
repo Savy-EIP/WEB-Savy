@@ -3,7 +3,7 @@
 	import { Motion, useAnimation } from 'svelte-motion';
 
 	export let width = 'fit-content';
-	export let boxColor = '#9C44FF';
+	export let boxColor = '#00000000';
 	export let duration = 0.5;
 
 	//   Animation Controls
@@ -37,7 +37,7 @@
 		}}
 		initial="hidden"
 		animate={mainControls}
-		transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}
+		transition={{ duration: duration ? duration : 0.5, delay: 0.15 }}
 	>
 		<div use:motion>
 			<slot>Default</slot>
