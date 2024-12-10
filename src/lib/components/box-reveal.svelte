@@ -37,7 +37,7 @@
 		}}
 		initial="hidden"
 		animate={mainControls}
-		transition={{ duration: duration ? duration : 0.5, delay: 0.15 }}
+		transition={{ duration: duration ? duration : 0.5, delay: 0.1 }}
 	>
 		<div use:motion>
 			<slot>Default</slot>

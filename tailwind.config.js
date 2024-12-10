@@ -4,9 +4,11 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				svBackground: "#1F1F1F",
 				svBack: '#181818',
-				svBack95: '#18181895',
+				svBack95: '#18181864',
 				svPurple: '#9C44FF',
+				svPurpleBack: "#0B0511"
 			},
 			keyframes: {
 				colorChange: {

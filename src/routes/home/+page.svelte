@@ -9,6 +9,7 @@
 	import fight from '$lib/img/savy_won_duo1.png';
 	import Github from '$lib/icons/github.svg';
 	import BoxReveal from '$lib/components/box-reveal.svelte';
+	import ShineBorder from '$lib/components/shine-border.svelte';
 
 	let showContent = false;
 	let showFight = false;
@@ -54,7 +55,7 @@
 		<!-- Navbar -->
 		<div class="fixed w-full p-2 md:p-4 z-50">
 			<div
-				class="flex flex-col md:flex-row justify-center md:justify-normal items-center p-4 bg-svBack md:bg-svBack95 rounded-xl header"
+				class="flex flex-col md:flex-row justify-center md:justify-normal items-center p-4 bg-svBack md:bg-opacity-95 rounded-xl header"
 			>
 				<a href="/" class="flex w-1/4 justify-center">
 					<LogoStatic ratio={ratioSavyLogo} />
@@ -64,6 +65,7 @@
 				>
 					<a href="#home" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl equilibrate">Home</a>
 					<a href="#project" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Project</a>
+					<a href="#features" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Features</a>
 					<a href="#team" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Team</a>
 					<a href="#contact" class="text-lg md:text-xl 2k:text-3xl 4k:text-4xl">Contact</a>
 				</div>
@@ -129,11 +131,119 @@
 			</div>
 		</div>
 
+		<!-- Features content -->
+		<div id="features" class="flex flex-col w-full items-center py-44 md:pt-0 my-32">
+			<div class="pt-16">
+				<BoxReveal>
+					<div class="flex items-baseline">
+						<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">
+							FEATURES
+						</h1>
+						<SavyDot ratio={ratioWIP} />
+					</div>
+				</BoxReveal>
+			</div>
+			<BoxReveal>
+				<div
+					class="flex flex-col md:flex-row justify-around items-center md:items-start gap-y-12 md:gap-y-0 w-screen"
+				>
+					<ShineBorder>
+						<div class="flex flex-col w-64 md:w-96 w-128 w-256 p-4">
+							<h1
+								class="text-center text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8"
+							>
+								Discussions
+							</h1>
+							<hr />
+							<h2
+								class="text-xl md
+							:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8"
+							>
+								You can discuss with the Echos on different topics or situations in oral or written
+								form.
+							</h2>
+						</div>
+					</ShineBorder>
+					<ShineBorder>
+						<div class="flex flex-col w-64 md:w-96 w-128 w-256 p-4">
+							<h1
+								class="text-center text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8"
+							>
+								Savy AI
+							</h1>
+							<hr />
+							<h2
+								class="text-xl md
+						:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8"
+							>
+								Savy will correct, suggest and help you to improve your language skills when you
+								speak or write with the Echos. He gives you feedback on your pronunciation, grammar,
+								vocabulary, and more.
+							</h2>
+						</div>
+					</ShineBorder>
+					<ShineBorder>
+						<div class="flex flex-col w-64 md:w-96 w-128 w-256 p-4">
+							<h1
+								class="text-center text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8"
+							>
+								Lessons
+							</h1>
+							<hr />
+							<h2
+								class="text-xl md
+					:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8"
+							>
+								You can take lessons based on your level and your needs. The lessons are
+								personalized and adapted to your progress.
+							</h2>
+						</div>
+					</ShineBorder>
+				</div>
+			</BoxReveal>
+			<BoxReveal>
+				<div
+					class="flex flex-col md:flex-row justify-around items-center md:items-start w-screen gap-y-12 pt-12 md:gap-y-0 md:pt-24"
+				>
+					<ShineBorder>
+						<div class="flex flex-col w-64 md:w-96 w-128 w-256 p-4">
+							<h1
+								class="text-center text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8"
+							>
+								Progress
+							</h1>
+							<hr />
+							<h2
+								class="text-xl md
+							:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8"
+							>
+								You can track your progress and see your improvements over time.
+							</h2>
+						</div>
+					</ShineBorder>
+					<ShineBorder>
+						<div class="flex flex-col w-64 md:w-96 w-128 w-256 p-4">
+							<h1
+								class="text-center text-2xl md:text-4xl 2k:text-6xl 4k:text-7xl pb-2 2k:pb-4 4k:pb-8"
+							>
+								Multiple languages handled
+							</h1>
+							<hr />
+							<h2
+								class="text-xl md
+						:text-2xl 2k:text-4xl 4k:text-5xl pt-2 2k:pt-4 4k:pt-8"
+							>
+								You can learn multiple languages with Savy. The Echos can speak and understand
+								multiple languages.
+							</h2>
+						</div>
+					</ShineBorder>
+				</div>
+			</BoxReveal>
+		</div>
+
 		<!-- Team content -->
-		<div
-			id="team"
-			class="flex flex-col w-full h-auto md:h-screen justify-center items-center pt-44 md:pt-0"
-		>
+		<div id="team" class="flex flex-col w-full justify-center items-center pb-44">
 			<BoxReveal>
 				<div class="flex items-baseline">
 					<h1 class="text-3xl md:text-5xl 2k:text-6xl 4k:text-7xl mb-24 pr-1 2k:pr-2 4k:pr-3">
@@ -205,7 +315,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: radial-gradient(circle, #9c44ff 0%, #000000 20%);
+		background: radial-gradient(circle, #9c44ff 0%, #000 20%);
 		animation: pulse 3s infinite;
 		z-index: -1;
 		border-radius: inherit;
