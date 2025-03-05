@@ -1,53 +1,173 @@
-<script>
-	import { fade } from 'svelte/transition';
-	import LogoAnim from '$lib/icons/logo-animated.svelte';
-	import { goto } from '$app/navigation';
+<script lang="ts">
+	import Title from '$lib/components/Title.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Card from '$lib/components/Card.svelte';
+	import listTeam from '$lib/data/team';
+	import Footer from '$lib/components/Footer.svelte';
+	import { SiAndroid, SiApple } from '@icons-pack/svelte-simple-icons';
 	import { onMount } from 'svelte';
 
-	let ratio = 1.5;
-
-	function navigateToHome() {
-		goto('/home');
-	}
-
-	function updateRatio() {
-		const width = window.innerWidth;
-		if (width < 640) {
-			ratio = 1;
-		} else if (width >= 2560 && width < 3840) {
-			ratio = 2;
-		} else if (width >= 3840) {
-			ratio = 3;
-		} else {
-			ratio = 1.5;
-		}
-	}
+	let isAppleDevice = false;
+	let isMobileView = false;
 
 	onMount(() => {
-		updateRatio();
-		window.addEventListener('resize', updateRatio);
-		return () => window.removeEventListener('resize', updateRatio);
+		const userAgent = navigator.userAgent.toLowerCase();
+		isAppleDevice = /iphone|ipad|ipod|mac/.test(userAgent);
+
+		checkMobileView();
+
+		window.addEventListener('resize', checkMobileView);
+
+		return () => {
+			window.removeEventListener('resize', checkMobileView);
+		};
 	});
+
+	function checkMobileView() {
+		isMobileView = window.innerWidth < 768;
+	}
 </script>
 
-<button class="flex justify-center items-center w-screen h-screen clickon" on:click={navigateToHome} type="button" aria-label="Navigate to Home">
-	<LogoAnim {ratio} />
-</button>
+<div>
+	<Header />
+
+	<div
+		id="home"
+		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-cover bg-center py-24 md:py-8 mb:space-y-5"
+		style="background-image: url('{isMobileView
+			? '/images/logo_blur_mobile.png'
+			: '/images/logo_blur.png'}');"
+	>
+		<div class="h-1 w-full bg-transparent"></div>
+		<div class="flex flex-col items-center space-y-4 md:space-y-8">
+			<h1 class="title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl">
+				Learn by discussing,<br />
+				progress by practicing.
+			</h1>
+			<h1
+				class="title text-center text-xl font-medium text-surfaceInverse drop-shadow-lg mb:text-2xl"
+			>
+				Your new powerful application to learn, effectively, a language.
+			</h1>
+		</div>
+
+		<div
+			class="flex w-full flex-col items-center justify-center space-x-0 space-y-6 md:flex-row md:space-x-6 md:space-y-0"
+		>
+			{#if !isMobileView || (isMobileView && isAppleDevice)}
+				<button
+					class="flex cursor-not-allowed items-center justify-center space-x-2 rounded-md bg-white px-3 py-2 text-black transition duration-300 ease-in-out hover:text-blueSavy"
+					disabled
+				>
+					<SiApple size={16} />
+					<p>Download on iOS</p>
+				</button>
+			{/if}
+			{#if !isMobileView || (isMobileView && !isAppleDevice)}
+				<button
+					class="flex cursor-not-allowed items-center justify-center space-x-2 rounded-md bg-white px-3 py-2 text-black transition duration-300 ease-in-out hover:text-greenSavy"
+					disabled
+				>
+					<SiAndroid size={16} />
+					<p>Download on Android</p>
+				</button>
+			{/if}
+		</div>
+	</div>
+
+	<div id="project" class="flex w-screen flex-col items-center space-y-20">
+		<div class="mt-20 flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
+			<Title title="Learn language differently." subtitle="Write, speak about what you like." />
+			<p class="text-md w-full text-white mb:text-lg">
+				Our language learning solution powered with <strong class="text-primary"
+					>artificial intelligence (AI)</strong
+				>. Our aim is to simulate as much of the environment as possible for maximum written and
+				spoken interaction with different <strong class="text-primary">Echos (AI)</strong> where
+				they have multiples accents and personalities. We offer lessons or discussions to perfect
+				your language. All this will be supervised by your
+				<strong class="text-primary">SAVY assistant</strong>, who will personalize your course and
+				correct any errors in spelling, syntax, meaning, pronunciation...
+			</p>
+		</div>
+		<div class="flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
+			<Title title="Savy." subtitle="Simple and easy." />
+			<p class="text-md w-full text-white mb:text-lg">
+				Based on the word "savvy" which means "<strong class="text-primary">knowledgeable</strong>",
+				we remove the "v" to make it a unique name for the application and the assistant, easy to
+				remember and pronounce
+			</p>
+		</div>
+		<div class="flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
+			<Title title="Who are the Echoes?" subtitle="Unique in all terms." />
+			<p class="text-md w-full text-white mb:text-lg">
+				The Echos are the AI that you will interact with. They are each <strong class="text-primary"
+					>unique</strong
+				>
+				and have their own
+				<strong class="text-primary">personality</strong>, accent and 3D model.
+			</p>
+		</div>
+	</div>
+
+	<div class="my-10 flex w-screen justify-center">
+		<div class="h-0.5 w-3/5 bg-on"></div>
+	</div>
+
+	<div id="features" class="flex w-screen flex-col items-center space-y-5">
+		<Title title="Learning has never been easier." subtitle="All you need is here." />
+		<Card
+			title="Discussion"
+			subtitle="You can discuss with the Echoes on different topics or situations in oral or written form based on your current level of language."
+		/>
+		<Card
+			title="Savy AI"
+			subtitle="Savy will correct, suggest and help you to improve your language skills when you speak or write with the Echos. He gives you feedback on your pronunciation, grammar, vocabulary, and more."
+		/>
+		<Card
+			title="Lesson"
+			subtitle="You can take lessons with the Echoes to improve your language skills. The lessons are personalized according to your level."
+		/>
+		<Card
+			title="Progress"
+			subtitle="You can track your progress and see your improvements over time to help you to understand and see the key points to improve."
+		/>
+		<Card
+			title="Multiples Languages Handled"
+			subtitle="You can learn multiple languages with Savy. The Echos can speak and understand multiple languages."
+		/>
+	</div>
+
+	<div class="my-10 flex w-screen justify-center">
+		<div class="h-0.5 w-3/5 bg-on"></div>
+	</div>
+
+	<div id="team" class="flex w-screen flex-col items-center space-y-5">
+		<Title title="The team on this project." subtitle="Determinate and passionate." />
+
+		<div class="w- flex w-5/6 flex-wrap items-start justify-center mb:w-3/5">
+			{#each listTeam as member}
+				<a href={member.github} target="_blank" class="m-3">
+					<Card
+						title={member.name}
+						subtitle={member.role}
+						isCentered={true}
+						activeHover={true}
+						width={'w-72 md:w-96'}
+					/>
+				</a>
+			{/each}
+		</div>
+	</div>
+
+	<div class="my-10 flex w-screen justify-center">
+		<div class="h-0.5 w-3/5 bg-on"></div>
+	</div>
+
+	<Footer />
+</div>
 
 <style>
-	.clickon {
-		animation: scale 4s infinite;
-	}
-
-	@keyframes scale {
-		0% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: scale(1);
-		}
+	.title {
+		font-family: 'Vision', sans-serif;
 	}
 </style>
