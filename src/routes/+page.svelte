@@ -33,7 +33,7 @@
 
 	<div
 		id="home"
-		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-cover bg-center p-8 mb:space-y-5"
+		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-cover bg-center py-24 md:py-8 mb:space-y-5"
 		style="background-image: url('{isMobileView
 			? '/images/logo_blur_mobile.png'
 			: '/images/logo_blur.png'}');"

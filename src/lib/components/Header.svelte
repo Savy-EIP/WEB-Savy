@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronDown, List, Mail } from 'lucide-svelte';
+	import { ChevronUp, List, Mail } from 'lucide-svelte';
 	import { Dropdown, DropdownItem, Button } from 'flowbite-svelte';
 	import { SiGithub } from '@icons-pack/svelte-simple-icons';
 	import Logo from '$lib/assets/logo.svg';
@@ -38,18 +38,18 @@
 		<Button on:click={toggleOpen}>
 			{#if dropdownOpen}
 				<div in:scale={{ duration: 300 }}>
-					<List />
+					<ChevronUp />
 				</div>
 			{:else}
 				<div in:scale={{ duration: 300 }}>
-					<ChevronDown />
+					<List />
 				</div>
 			{/if}
 		</Button>
-		<Dropdown class="rounded-md bg-surface p-3">
-			<DropdownItem class="m-2 text-lg text-on" href="#project">Project</DropdownItem>
-			<DropdownItem class="m-2 text-lg text-on" href="#features">Features</DropdownItem>
-			<DropdownItem class="m-2 text-lg text-on" href="#team">Team</DropdownItem>
+		<Dropdown class="rounded-md bg-surface p-3 space-y-4">
+			<DropdownItem class="mx-4 text-lg text-on" href="#project">Project</DropdownItem>
+			<DropdownItem class="mx-4 text-lg text-on" href="#features">Features</DropdownItem>
+			<DropdownItem class="mx-4 text-lg text-on" href="#team">Team</DropdownItem>
 		</Dropdown>
 	</div>
 {:else}
