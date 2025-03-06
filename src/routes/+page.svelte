@@ -34,13 +34,10 @@
 	<div
 		id="home"
 		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-cover bg-center py-24 md:py-8 mb:space-y-5"
-		style="background-image: url('{isMobileView
-			? '/images/logo_blur_mobile.png'
-			: '/images/logo_blur.png'}');"
 	>
 		<div class="h-1 w-full bg-transparent"></div>
 		<div class="flex flex-col items-center space-y-4 md:space-y-8">
-			<h1 class="title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl">
+			<h1 class="title animated-title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl">
 				Learn by discussing,<br />
 				progress by practicing.
 			</h1>
@@ -169,5 +166,23 @@
 <style>
 	.title {
 		font-family: 'Vision', sans-serif;
+	}
+
+	.animated-title {
+		background: linear-gradient(90deg, #ffffff, #ffffff, #9c44ff, #ffffff, #ffffff);
+		background-size: 200% auto;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		animation: shine 5s linear infinite;
+	}
+
+	@keyframes shine {
+		from {
+			background-position: 200% center;
+		}
+		to {
+			background-position: 0% center;
+		}
 	}
 </style>
