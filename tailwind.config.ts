@@ -12,6 +12,7 @@ export default {
 				surfaceInverse: '#d0d0d0',
 				front: '#2d2d2d',
 				primary: '#9C44ff',
+				primaryLight: '#DABAFF',
 				on: '#ffffff',
 				onSurface: '#b6b6b6',
 				blueSavy: '#2f6dec',

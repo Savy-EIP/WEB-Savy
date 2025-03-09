@@ -33,16 +33,18 @@
 
 	<div
 		id="home"
-		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-cover bg-center py-24 md:py-8 mb:space-y-5"
+		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-gradient-to-t from-background to-surface py-24 md:py-8 mb:space-y-5"
 	>
 		<div class="h-1 w-full bg-transparent"></div>
 		<div class="flex flex-col items-center space-y-4 md:space-y-8">
-			<h1 class="title animated-title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl">
+			<h1
+				class="title animated-title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl"
+			>
 				Learn by discussing,<br />
 				progress by practicing.
 			</h1>
 			<h1
-				class="title text-center text-xl font-medium text-surfaceInverse drop-shadow-lg mb:text-2xl"
+				class="animated-subtitle title text-center text-xl font-medium text-surfaceInverse drop-shadow-lg mb:text-2xl"
 			>
 				Your new powerful application to learn, effectively, a language.
 			</h1>
@@ -170,6 +172,15 @@
 
 	.animated-title {
 		background: linear-gradient(90deg, #ffffff, #ffffff, #9c44ff, #ffffff, #ffffff);
+		background-size: 200% auto;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		animation: shine 5s linear infinite;
+	}
+
+	.animated-subtitle {
+		background: linear-gradient(90deg, #b6b6b6, #b6b6b6, #ffffff, #b6b6b6, #b6b6b6);
 		background-size: 200% auto;
 		color: transparent;
 		-webkit-background-clip: text;
