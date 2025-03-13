@@ -58,7 +58,7 @@
 				target="_blank"
 				class="text-md inline-flex animate-shine items-center justify-center rounded-xl border border-front bg-[linear-gradient(110deg,#000103,45%,#9C44ff,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-surfaceInverse transition-colors"
 			>
-				Be a beta tester
+				Join beta test
 			</a>
 			<!-- {#if !isMobileView || (isMobileView && isAppleDevice)}
 				<button
