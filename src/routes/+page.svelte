@@ -33,10 +33,10 @@
 
 	<div
 		id="home"
-		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-gradient-to-t from-background to-surface py-24 md:py-8 mb:space-y-5"
+		class="flex h-screen w-full flex-col items-center justify-between space-y-2 overflow-hidden bg-gradient-to-t from-background from-30% to-surface py-24 md:py-16 mb:space-y-5"
 	>
 		<div class="h-1 w-full bg-transparent"></div>
-		<div class="flex flex-col items-center space-y-4 md:space-y-8">
+		<div class="flex w-full flex-col items-center space-y-4 md:space-y-8">
 			<h1
 				class="title animated-title text-center text-2xl font-bold text-white drop-shadow-lg mb:text-6xl"
 			>
