@@ -11,6 +11,11 @@
 	let ctx: CanvasRenderingContext2D | null = null;
 	let animationFrameId: number | null = null;
 	let resizeObserver: ResizeObserver | null = null;
+	
+	let isScrolling = false;
+	let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+	let lastClientHeight = 0;
+	let lastClientWidth = 0;
 
 	interface Star {
 		x: number;
@@ -55,9 +60,7 @@
 
 		stars.forEach((star) => {
 			ctx!.beginPath();
-
 			ctx!.fillStyle = hexToRgba(starColor, star.opacity);
-
 			ctx!.arc(star.x, star.y, star.size, 0, Math.PI * 2);
 			ctx!.fill();
 
@@ -94,6 +97,18 @@
 			}
 		});
 	}
+	
+	function handleScroll() {
+		isScrolling = true;
+		
+		if (scrollTimeout) {
+			clearTimeout(scrollTimeout);
+		}
+		
+		scrollTimeout = setTimeout(() => {
+			isScrolling = false;
+		}, 100);
+	}
 
 	function animate() {
 		if (typeof window === 'undefined') return;
@@ -105,9 +120,22 @@
 
 	function handleResize() {
 		if (!canvas || !ctx) return;
-
-		canvas.width = canvas.clientWidth;
-		canvas.height = canvas.clientHeight;
+		
+		const currentClientWidth = canvas.clientWidth;
+		const currentClientHeight = canvas.clientHeight;
+		
+		if ((currentClientWidth === lastClientWidth && 
+		     currentClientHeight === lastClientHeight) || 
+		    isScrolling) {
+			return;
+		}
+		
+		lastClientWidth = currentClientWidth;
+		lastClientHeight = currentClientHeight;
+		
+		canvas.width = currentClientWidth;
+		canvas.height = currentClientHeight;
+		
 		initStars();
 	}
 
@@ -119,13 +147,22 @@
 
 			canvas.width = canvas.clientWidth;
 			canvas.height = canvas.clientHeight;
+			
+			lastClientWidth = canvas.clientWidth;
+			lastClientHeight = canvas.clientHeight;
 
 			if (window.ResizeObserver) {
-				resizeObserver = new ResizeObserver(handleResize);
+				resizeObserver = new ResizeObserver(entries => {
+					if (!isScrolling) {
+						handleResize();
+					}
+				});
 				resizeObserver.observe(canvas);
 			} else {
 				window.addEventListener('resize', handleResize);
 			}
+			
+			window.addEventListener('scroll', handleScroll, { passive: true });
 
 			initStars();
 			animate();
@@ -137,6 +174,12 @@
 			if (animationFrameId !== null) {
 				window.cancelAnimationFrame(animationFrameId);
 			}
+			
+			if (scrollTimeout) {
+				clearTimeout(scrollTimeout);
+			}
+			
+			window.removeEventListener('scroll', handleScroll);
 
 			if (resizeObserver) {
 				resizeObserver.disconnect();
@@ -147,7 +190,10 @@
 	});
 </script>
 
-<canvas bind:this={canvas} class="stars-canvas" style="background-color: {backgroundColor};"
+<canvas 
+	bind:this={canvas} 
+	class="stars-canvas" 
+	style="background-color: {backgroundColor};"
 ></canvas>
 
 <style>
@@ -158,5 +204,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 	}
 </style>
