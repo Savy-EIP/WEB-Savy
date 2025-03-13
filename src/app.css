@@ -3,18 +3,28 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: 'Vision';
-  src: url('./fonts/Vision-Bold.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'Vision';
+	src: url('./fonts/Vision-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
 
-  src: url('./fonts/Vision.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal; 
+	src: url('./fonts/Vision.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 html {
-  font-family: 'Helvetica', sans-serif;
-  background-color: #0E0E0E;
-  scroll-behavior: smooth;
+	top: 0;
+	left: 0;
+	font-family: 'Helvetica', sans-serif;
+	background-color: #0e0e0e;
+	scroll-behavior: smooth;
+}
+
+body {
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
 }
