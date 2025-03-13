@@ -84,9 +84,9 @@
 		</div>
 
 		<div id="project" class="flex w-screen flex-col items-center space-y-20">
-			<div class="mt-20 flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
+			<div class="mt-2 flex w-5/6 flex-col items-center space-y-5 md:mt-20 mb:w-2/3">
 				<Title title="Learn language differently." subtitle="Write, speak about what you like." />
-				<p class="text-md w-full text-white mb:text-lg">
+				<p class="text-md w-full text-white md:text-center mb:text-lg">
 					Our language learning solution powered with <strong class="text-primary"
 						>artificial intelligence (AI)</strong
 					>. Our aim is to simulate as much of the environment as possible for maximum written and
@@ -99,7 +99,7 @@
 			</div>
 			<div class="flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
 				<Title title="Savy." subtitle="Simple and easy." />
-				<p class="text-md w-full text-white mb:text-lg">
+				<p class="text-md w-full text-white md:text-center mb:text-lg">
 					Based on the word "savvy" which means "<strong class="text-primary">knowledgeable</strong
 					>", we remove the "v" to make it a unique name for the application and the assistant, easy
 					to remember and pronounce
@@ -107,7 +107,7 @@
 			</div>
 			<div class="flex w-5/6 flex-col items-center space-y-5 mb:w-2/3">
 				<Title title="Who are the Echoes?" subtitle="Unique in all terms." />
-				<p class="text-md w-full text-white mb:text-lg">
+				<p class="text-md w-full text-white md:text-center mb:text-lg">
 					The Echos are the AI that you will interact with. They are each <strong
 						class="text-primary">unique</strong
 					>
