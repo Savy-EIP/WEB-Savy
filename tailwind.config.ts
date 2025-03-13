@@ -20,6 +20,15 @@ export default {
 			},
 			screens: {
 				mb: '768px'
+			},
+			animation: {
+				shine: 'shine 3s linear infinite'
+			},
+			keyframes: {
+				shine: {
+					from: { backgroundPosition: '0 0' },
+					to: { backgroundPosition: '-200% 0' }
+				}
 			}
 		}
 	},

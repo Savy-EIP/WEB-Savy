@@ -1,9 +1,10 @@
 <script>
 	import { SiGithub, SiX, SiInstagram, SiTiktok } from '@icons-pack/svelte-simple-icons';
 	import { Mail } from 'lucide-svelte';
+	import Linkedin from '$lib/assets/linkedin.svelte';
 </script>
 
-<div class="mb-10 flex w-full justify-center">
+<div class="mb-10 flex w-full justify-center" id="contact">
 	<div class="flex flex-col items-center space-x-2 space-y-2 mb:flex-row">
 		<p class="text-on">©2025 Savy - All rights reserved.</p>
 		<div class="rounded-md p-1">
@@ -16,6 +17,11 @@
 				<div class="rounded-md p-1 transition-all mb:hover:bg-front">
 					<a href="https://github.com/Savy-EIP" target="_blank">
 						<SiGithub color="#FFFFFF" />
+					</a>
+				</div>
+				<div class="rounded-md p-1 transition-all mb:hover:bg-front">
+					<a href="https://www.linkedin.com/company/savyai/" target="_blank">
+						<Linkedin />
 					</a>
 				</div>
 				<div class="rounded-md p-1 transition-all mb:hover:bg-front">

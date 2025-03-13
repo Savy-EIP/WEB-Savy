@@ -5,7 +5,7 @@
 	import Logo from '$lib/assets/logo.svg';
 	import HeaderNavigation from '$lib/components/HeaderNavigation.svelte';
 	import { onMount } from 'svelte';
-	import { fade, scale, fly } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 
 	let isMobile = false;
 	let dropdownOpen = false;
@@ -50,6 +50,7 @@
 			<DropdownItem class="mx-4 text-lg text-on" href="#project">Project</DropdownItem>
 			<DropdownItem class="mx-4 text-lg text-on" href="#features">Features</DropdownItem>
 			<DropdownItem class="mx-4 text-lg text-on" href="#team">Team</DropdownItem>
+			<DropdownItem class="mx-4 text-lg text-on" href="#contact">Contact</DropdownItem>
 		</Dropdown>
 	</div>
 {:else}
@@ -65,6 +66,7 @@
 				<HeaderNavigation name={'Project'} route={'#project'} />
 				<HeaderNavigation name={'Features'} route={'#features'} />
 				<HeaderNavigation name={'Team'} route={'#team'} />
+				<HeaderNavigation name={'Contact'} route={'#contact'} />
 			</div>
 			<div class="h-5 w-px bg-onSurface"></div>
 			<div class="flex space-x-2">

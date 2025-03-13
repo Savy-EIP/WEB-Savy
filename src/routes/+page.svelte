@@ -53,7 +53,14 @@
 		<div
 			class="flex w-full flex-col items-center justify-center space-x-0 space-y-6 md:flex-row md:space-x-6 md:space-y-0"
 		>
-			{#if !isMobileView || (isMobileView && isAppleDevice)}
+			<a
+				href="https://forms.gle/w3PQvpLnB8PvrSDB6"
+				target="_blank"
+				class="text-md inline-flex animate-shine items-center justify-center rounded-xl border border-front bg-[linear-gradient(110deg,#000103,45%,#9C44ff,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-surfaceInverse transition-colors"
+			>
+				Be a beta tester
+			</a>
+			<!-- {#if !isMobileView || (isMobileView && isAppleDevice)}
 				<button
 					class="flex cursor-not-allowed items-center justify-center space-x-2 rounded-md bg-white px-3 py-2 text-black transition duration-300 ease-in-out hover:text-blueSavy"
 					disabled
@@ -70,7 +77,7 @@
 					<SiAndroid size={16} />
 					<p>Download on Android</p>
 				</button>
-			{/if}
+			{/if} -->
 		</div>
 	</div>
 
