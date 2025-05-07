@@ -60,7 +60,7 @@
 					target="_blank"
 					class="text-md inline-flex animate-shine items-center justify-center rounded-xl border border-front bg-[linear-gradient(110deg,#000103,45%,#9C44ff,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-surfaceInverse transition-colors"
 				>
-					Join beta test
+					Join alpha testing
 				</a>
 				<!-- {#if !isMobileView || (isMobileView && isAppleDevice)}
 				<button
@@ -164,6 +164,23 @@
 						/>
 					</a>
 				{/each}
+			</div>
+		</div>
+
+		<div class="my-10 flex w-screen justify-center">
+			<div class="h-0.5 w-3/5 bg-on"></div>
+		</div>
+
+		<div id="values" class="flex w-screen flex-col items-center space-y-5">
+			<div class="mt-2 flex w-5/6 flex-col items-center space-y-5 md:mt-20 mb:w-2/3">
+				<Title title="Our values." subtitle="Respecting your data." />
+				<p class="text-md w-full text-white md:text-center mb:text-lg">
+					Savy values free learning by providing <strong class="text-primary">education for everyone</strong>, as learning should never be
+					about money. It upholds ethics and user respect with an approach that <strong class="text-primary">avoids exploitation
+					and manipulation</strong>, making decisions to honor the user. Additionally, Savy is committed to
+					data protection, ensuring your <strong class="text-primary">data remains yours without reselling, surveillance, or
+					toxic algorithms</strong>, offering a tool designed to help you progress confidently.
+				</p>
 			</div>
 		</div>
 

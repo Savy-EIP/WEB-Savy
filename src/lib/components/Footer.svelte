@@ -4,9 +4,9 @@
 	import Linkedin from '$lib/assets/linkedin.svelte';
 </script>
 
-<div class="mb-10 flex w-full justify-center" id="contact">
+<footer class="mb-10 flex w-full justify-center" id="contact">
 	<div class="flex flex-col items-center space-x-2 space-y-2 mb:flex-row">
-		<p class="text-on">©2025 Savy - All rights reserved.</p>
+		<p class="text-on pt-2">©2025 Savy - All rights reserved.</p>
 		<div class="rounded-md p-1">
 			<div class="flex items-center space-x-2">
 				<div class="rounded-md p-1 transition-all mb:hover:bg-front">
@@ -47,4 +47,4 @@
 			<a href="https://www.epitech.eu/" class="underline">Epitech</a>
 		</p>
 	</div>
-</div>
+</footer>

@@ -29,7 +29,7 @@
 </script>
 
 {#if isMobile}
-	<div
+	<header
 		class="fixed z-10 flex w-full justify-between border border-front bg-surface80 px-10 py-3 backdrop-blur-md"
 	>
 		<a href="#home">
@@ -51,10 +51,11 @@
 			<DropdownItem class="mx-4 text-lg text-on" href="#features">Features</DropdownItem>
 			<DropdownItem class="mx-4 text-lg text-on" href="#team">Team</DropdownItem>
 			<DropdownItem class="mx-4 text-lg text-on" href="#contact">Contact</DropdownItem>
+			<DropdownItem class="mx-4 text-lg text-on" href="#values">Values</DropdownItem>
 		</Dropdown>
-	</div>
+	</header>
 {:else}
-	<div class="fixed z-10 mt-7 flex w-full justify-center">
+	<header class="fixed z-10 mt-7 flex w-full justify-center">
 		<div
 			class="flex h-12 items-center justify-center space-x-10 rounded-lg border border-front bg-surface80 px-10 backdrop-blur-md"
 		>
@@ -67,6 +68,7 @@
 				<HeaderNavigation name={'Features'} route={'#features'} />
 				<HeaderNavigation name={'Team'} route={'#team'} />
 				<HeaderNavigation name={'Contact'} route={'#contact'} />
+				<HeaderNavigation name={'Values'} route={'#values'} />
 			</div>
 			<div class="h-5 w-px bg-onSurface"></div>
 			<div class="flex space-x-2">
@@ -82,5 +84,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 {/if}
