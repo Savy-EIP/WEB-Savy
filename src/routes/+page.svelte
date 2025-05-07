@@ -56,7 +56,7 @@
 				class="flex w-full flex-col items-center justify-center space-x-0 space-y-6 md:flex-row md:space-x-6 md:space-y-0"
 			>
 				<a
-					href="https://forms.gle/w3PQvpLnB8PvrSDB6"
+					href="https://tally.so/r/3NgW4Q"
 					target="_blank"
 					class="text-md inline-flex animate-shine items-center justify-center rounded-xl border border-front bg-[linear-gradient(110deg,#000103,45%,#9C44ff,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-surfaceInverse transition-colors"
 				>
