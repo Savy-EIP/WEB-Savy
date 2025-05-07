@@ -62,6 +62,13 @@
 				>
 					Join alpha testing
 				</a>
+				<a
+					href="https://tally.so/r/mZgJ9A"
+					target="_blank"
+					class="text-md inline-flex items-center justify-center rounded-xl border border-surface hover:border-front text-onSurface hover:text-on transition-all duration-200 px-4 py-2 font-medium"
+				>
+					Give us feedback
+				</a>
 				<!-- {#if !isMobileView || (isMobileView && isAppleDevice)}
 				<button
 					class="flex cursor-not-allowed items-center justify-center space-x-2 rounded-md bg-white px-3 py-2 text-black transition duration-300 ease-in-out hover:text-blueSavy"
