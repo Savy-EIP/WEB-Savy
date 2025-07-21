@@ -73,7 +73,7 @@ body {
 	}
 
 	.footer-button {
-		@apply text-onfront-white dark:text-onfront-black hover:text-purple-dark dark:hover:text-purple-light flex items-center transition-all duration-200;
+		@apply text-onfront-white dark:text-onfront-black hover:text-purple-dark dark:hover:text-purple-light text-lg md:text-sm flex items-center transition-all duration-200;
 	}
 }
 

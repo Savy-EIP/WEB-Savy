@@ -14,12 +14,12 @@
 	];
 </script>
 
-<div class="mx-32 flex h-auto w-auto flex-col items-center justify-center">
-	<h4 class="w-full text-4xl">{$_('languagesAvailable')}</h4>
-	<div class="mt-4 mb-12 flex w-full flex-wrap gap-12">
+<div class="mx-4 md:mx-32 flex h-auto w-auto flex-col items-center justify-center">
+	<h4 class="w-full text-2xl md:text-4xl">{$_('languagesAvailable')}</h4>
+	<div class="mt-4 mb-12 flex w-full flex-wrap gap-4 md:gap-12">
 		{#each languages as language}
 			<div class="flex items-center space-x-4">
-				<img src={language.flag} alt={language.code} class="h-9" />
+				<img src={language.flag} alt={language.code} class="h-5 md:h-9" />
 				<span class="text-lg">{$_(`languages.${language.code}`)}</span>
 			</div>
 		{/each}

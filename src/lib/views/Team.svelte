@@ -56,8 +56,8 @@
 	];
 </script>
 
-<div class="mx-32 flex h-screen w-auto flex-col items-center pt-32">
-	<h4 class="w-full text-4xl">{$_('discoverTeam')}</h4>
+<div class="mx-4 md:mx-32 flex h-auto mb-12 md:h-screen w-auto flex-col items-center pt-32">
+	<h4 class="w-full text-3xl md:text-4xl">{$_('discoverTeam')}</h4>
 	<Line />
 	<div class="flex w-full flex-wrap justify-center gap-10 pt-8">
 		{#each team as member}
@@ -66,10 +66,10 @@
 					<img src={member.image} alt={member.name} class="h-28" />
 					<div class="flex h-full flex-col items-start justify-between py-4">
 						<div class="flex flex-col items-start">
-							<h5 class="text-lg font-semibold">{member.name}</h5>
+							<h5 class="text-xl md:text-lg font-semibold">{member.name}</h5>
 							<h5 class="text-xl font-light">{$_(`team.${member.name}`)}</h5>
 						</div>
-						<div class="flex gap-2 pt-2 underline">
+						<div class="flex gap-2 pt-2 underline text-lg md:text-sm">
 							<a href={member.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
 							<a href={member.github} target="_blank" rel="noopener noreferrer">GitHub</a>
 							{#if member.website}

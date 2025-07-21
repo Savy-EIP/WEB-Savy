@@ -4,11 +4,11 @@
 </script>
 
 <footer
-	class="bg-surface-light dark:bg-surface-dark flex h-auto w-full items-center justify-center py-2" id="contact"
+	class="bg-surface-light dark:bg-surface-dark flex flex-col md:flex-row gap-y-2 md:gap-y-0 h-auto w-full items-center justify-center py-4" id="contact"
 >
-	<div class="mb-auto flex w-1/6 flex-col">
-		<h2 class="vision text-lg font-bold">{$_('application')}</h2>
-		<nav class="mt-2 flex flex-col space-y-1 text-sm">
+	<div class="mb-auto flex w-2/3 md:w-1/6 flex-col">
+		<h2 class="vision text-xl md:text-lg font-bold">{$_('application')}</h2>
+		<nav class="mt-0.5 md:mt-2 flex flex-col space-y-1 text-sm">
 			<a
 				href="https://tally.so/r/3NgW4Q"
 				target="_blank"
@@ -25,9 +25,9 @@
 			>
 		</nav>
 	</div>
-	<div class="mb-auto flex w-1/6 flex-col">
-		<h2 class="vision text-lg font-bold">{$_('company')}</h2>
-		<nav class="mt-2 flex flex-col space-y-1 text-sm">
+	<div class="mb-auto flex w-2/3 md:w-1/6 flex-col">
+		<h2 class="vision text-xl md:text-lg font-bold">{$_('company')}</h2>
+		<nav class="mt-0.5 md:mt-2 flex flex-col space-y-1 text-sm">
 			<a
 				href="https://privacy-policy.savy-ai.com/"
 				target="_blank"
@@ -59,9 +59,9 @@
 			>
 		</nav>
 	</div>
-	<div class="flex w-1/6 flex-col items-start justify-between">
-		<h2 class="vision text-lg font-bold">{$_('socialMedia')}</h2>
-		<nav class="mt-2 flex flex-col space-y-1 text-sm">
+	<div class="flex w-2/3 md:w-1/6 flex-col items-start justify-between">
+		<h2 class="vision text-xl md:text-lg font-bold">{$_('socialMedia')}</h2>
+		<nav class="mt-0.5 md:mt-2 flex flex-col space-y-1 text-sm">
 			<a
 				href="https://github.com/Savy-EIP"
 				target="_blank"

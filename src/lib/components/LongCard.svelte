@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let height: string = 'h-36';
-	export let width: string = 'w-1/3';
+	export let width: string = 'w-full md:w-1/3';
 </script>
 
 <div

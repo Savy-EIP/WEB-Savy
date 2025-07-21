@@ -11,6 +11,7 @@
 	"application": "Application",
 	"joinAlpha": "Join Alpha Program",
 	"installSavy": "Install Savy",
+	"installSavyMobile": "Install",
 	"discoverSavy": "Discover Savy",
 	"languagesAvailable": "Our available languages",
 	"languages": {
