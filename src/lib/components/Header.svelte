@@ -58,12 +58,17 @@
 		</nav>
 	{/if}
 
-	<div class="flex w-2/3 md:w-1/3 items-center justify-end space-x-2">
+	<div class="flex w-2/3 items-center justify-end space-x-2 md:w-1/3">
 		<a href="mailto:contact@savy-ai.com" class="square-button">
 			<Mail />
 		</a>
 		<ButtonTheme />
-		<Button label={$_(isMobile ? 'installSavyMobile' : 'installSavy')} href={'https://tally.so/r/3NgW4Q'} className="h-7 w-40 " />
+		<Button
+			label={$_(isMobile ? 'installSavyMobile' : 'installSavy')}
+			href={'https://tally.so/r/3NgW4Q'}
+			className="h-7 w-40 "
+		/>
+		{#if isMobile}
 		<button on:click={toggleOpen}>
 			{#if dropdownOpen}
 				<div in:scale={{ duration: 300 }}>
@@ -75,12 +80,13 @@
 				</div>
 			{/if}
 		</button>
-		<Dropdown class="bg-surface-light dark:bg-surface-dark space-y-4 rounded-md p-3 list-none">
+		<Dropdown class="bg-surface-light dark:bg-surface-dark list-none space-y-4 rounded-md p-3">
 			{#each navigations as item}
-				<DropdownItem class="text-on mx-4 text-lg " href={item.href}>
+				<DropdownItem class="mx-4 text-lg text-black dark:text-white" href={item.href}>
 					{item.name}
 				</DropdownItem>
 			{/each}
 		</Dropdown>
+	{/if}
 	</div>
 </header>
