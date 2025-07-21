@@ -1,16 +1,9 @@
 <script lang="ts">
-	import Title from './Title.svelte';
-
-	export let title;
-	export let subtitle;
-	export let isCentered = false;
-	export let activeHover = false;
-	export let width = 'w-5/6 mb:w-3/5';
+	export let height: string = 'h-36';
 </script>
 
 <div
-	class="flex flex-col space-y-1 {width} rounded-lg border border-front bg-surface p-2 transition-all"
-	class:mb:hover:bg-front={activeHover}
+	class="flex {height} w-28 items-center justify-center rounded-md bg-[radial-gradient(circle,_#dabaff_0%,_#f1f1f1_65%)] transition-all duration-200 hover:scale-110 dark:bg-[radial-gradient(circle,_#5e2999_0%,_#1f1f1f_65%)]"
 >
-	<Title {title} {subtitle} {isCentered} />
+	<slot />
 </div>

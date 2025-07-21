@@ -1,0 +1,65 @@
+{
+	"test": "This is a test",
+	"title": "Apprenez en discutant,<br />progressez en pratiquant.",
+	"subtitle": "Votre nouvelle application puissante pour apprendre, efficacement, une langue.",
+	"header": {
+		"solution": "Solution",
+		"AI": "IA",
+		"team": "Equipe",
+		"contact": "Contact"
+	},
+	"application": "Application",
+	"joinAlpha": "Rejoindre le programme Alpha",
+	"installSavy": "Installer Savy",
+	"discoverSavy": "Découvrir Savy",
+	"languagesAvailable": "Nos langues disponibles",
+	"languages": {
+		"en": "Anglais",
+		"fr": "Français",
+		"es": "Espagnol",
+		"it": "Italien"
+	},
+	"andMoreToCome": "Et bien d’autres à venir...",
+	"savyIntro": {
+		"with": "Avec",
+		"learnReally": "c'est apprendre une langue, vraiment."
+	},
+	"speakWithEchoes": "Parler à l’écrit comme à l’oral avec une multitude d’Echos <br /> tous les plus uniques les un des autres.",
+	"echoesUnique": "Chacun avec ses propres centres d'intérêt, son caractère et son avatar.",
+	"savyCoach": {
+		"supervised": "Tous ceci encadré par votre coach personnel ",
+		"himself": "lui-même."
+	},
+	"explanationErrors": "Des explications et analyses de vos erreurs sur tous vos messages.<br />Grâce à de simples formes colorées et d’icônes.",
+	"error": {
+		"noError": "Aucune erreur",
+		"suggestion": "Suggestion",
+		"minor": "Erreur mineure",
+		"major": "Erreur majeure",
+		"blocking": "Erreur bloquante",
+		"writing": "Mécanique de l'écriture",
+		"structure": "Structure grammaticale",
+		"lexical": "Choix lexical et style",
+		"pronunciation": "Articulation et prononciation",
+		"rhythm": "Mélodie et rythme de la parole"
+	},
+	"feedbackClick": "Et plus d’informations avec un simple clique sur votre message.",
+	"discoverTeam": "Découvrez notre équipe",
+	"team": {
+		"Antonin": "Développeur IA",
+		"Chris": "Développeur IA",
+		"Luca": "Développeur iOS & Designer",
+		"Quentin": "Développeur Full Stack",
+		"Terry": "Développeur Backend",
+		"Tom": "Développeur Android"
+	},
+	"giveUsFeedback": "Donnez-nous votre avis",
+	"company": "Compagnie",
+	"privacyPolicy": "Politique de confidentialité",
+	"termsOfUse": "Conditions d'utilisation",
+	"aboutUs": "À propos de nous",
+	"contactUs": "Contactez-nous",
+	"socialMedia": "Réseaux sociaux",
+	"404Title": "Oops ! Mauvaise page.",
+	"404Button": "Retourner à la page d'accueil ↩️"
+}

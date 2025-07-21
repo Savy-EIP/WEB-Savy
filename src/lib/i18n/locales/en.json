@@ -1,0 +1,65 @@
+{
+	"test": "This is a test",
+	"title": "Learn by discussing,<br />progress by practicing.",
+	"subtitle": "Your new powerful application to learn, effectively, a language.",
+	"header": {
+		"solution": "Solution",
+		"AI": "AI",
+		"team": "Team",
+		"contact": "Contact"
+	},
+	"application": "Application",
+	"joinAlpha": "Join Alpha Program",
+	"installSavy": "Install Savy",
+	"discoverSavy": "Discover Savy",
+	"languagesAvailable": "Our available languages",
+	"languages": {
+		"en": "English",
+		"fr": "French",
+		"es": "Spanish",
+		"it": "Italian"
+	},
+	"andMoreToCome": "And many more to come...",
+	"savyIntro": {
+		"with": "With",
+		"learnReally": "it's really about learning a language."
+	},
+	"speakWithEchoes": "Speak in writing as well as orally with a multitude of Echoes <br /> all unique in their own way.",
+	"echoesUnique": "Each with its own interests, character, and avatar.",
+	"savyCoach": {
+		"supervised": "All this supervised by your personal coach ",
+		"himself": "himself."
+	},
+	"explanationErrors": "Explanations and analyses of your mistakes on all your messages.<br />Thanks to simple colored shapes and icons.",
+	"error": {
+		"noError": "No error",
+		"suggestion": "Suggestion",
+		"minor": "Minor error",
+		"major": "Major error",
+		"blocking": "Blocking error",
+		"writing": "Mechanics of writing",
+		"structure": "Grammatical structure",
+		"lexical": "Lexical choice and style",
+		"pronunciation": "Articulation and pronunciation",
+		"rhythm": "Melody and speech rhythm"
+	},
+	"feedbackClick": "And more information with a simple click on your message.",
+	"discoverTeam": "Discover our team",
+	"team": {
+		"Antonin": "AI Developer",
+		"Chris": "AI Developer",
+		"Luca": "iOS Developer & Designer",
+		"Quentin": "Full Stack Developer",
+		"Terry": "Backend Developer",
+		"Tom": "Android Developer"
+	},
+	"giveUsFeedback": "Give us feedback",
+	"company": "Company",
+	"privacyPolicy": "Privacy Policy",
+	"termsOfUse": "Terms of Use",
+	"aboutUs": "About us",
+	"contactUs": "Contact us",
+	"socialMedia": "Social Media",
+	"404Title": "Oops! Wrong page.",
+	"404Button": "Go back on the homepage ↩️"
+}
