@@ -1,11 +1,19 @@
 <script lang="ts">
-	import { ChevronUp, List, Mail } from 'lucide-svelte';
-	import { Dropdown, DropdownItem, Button } from 'flowbite-svelte';
-	import { SiGithub } from '@icons-pack/svelte-simple-icons';
-	import Logo from '$lib/assets/logo.svg';
-	import HeaderNavigation from '$lib/components/HeaderNavigation.svelte';
+	import { _ } from 'svelte-i18n';
+	import { Dropdown, DropdownItem } from 'flowbite-svelte';
+	import Button from './Button.svelte';
+	import ButtonTheme from './ButtonTheme.svelte';
+	import Logo from './Logo.svelte';
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
+	import { ChevronUp, List, Mail } from '@lucide/svelte';
+
+	const navigations = [
+		{ name: $_('header.solution'), href: '/#solution' },
+		// { name: $_('header.AI'), href: '/ai' },
+		{ name: $_('header.team'), href: '/team' },
+		{ name: $_('header.contact'), href: '#contact' }
+	];
 
 	let isMobile = false;
 	let dropdownOpen = false;
@@ -28,14 +36,41 @@
 	}
 </script>
 
-{#if isMobile}
-	<header
-		class="fixed z-10 flex w-full justify-between border border-front bg-surface80 px-10 py-3 backdrop-blur-md"
-	>
-		<a href="#home">
-			<img src={Logo} alt="savy logo" class="h-7" />
+<header
+	class="dark:bg-surface-dark/80 bg-surface-light/80 border-front-light dark:border-front-dark fixed top-2 left-1/2 z-10 flex h-auto w-11/12 -translate-x-1/2 transform items-center justify-between space-x-6 rounded-lg border px-6 py-2 shadow backdrop-blur-sm md:w-5/6 md:justify-center"
+>
+	<div class="flex w-1/3 items-center justify-start">
+		<a href="/">
+			<Logo />
 		</a>
-		<Button on:click={toggleOpen}>
+	</div>
+
+	{#if !isMobile}
+		<nav class="flex w-1/3 items-center justify-center space-x-4">
+			{#each navigations as item}
+				<a
+					href={item.href}
+					class="text-onfront-white dark:text-onfront-black hover:text-purple-dark dark:hover:text-purple-light transition-all duration-200"
+				>
+					{item.name}
+				</a>
+			{/each}
+		</nav>
+	{/if}
+
+	<div class="flex w-2/3 items-center justify-end space-x-2 md:w-1/3">
+		<a href="mailto:contact@savy-ai.com" class="square-button">
+			<Mail />
+		</a>
+		<ButtonTheme />
+		<Button
+			label={$_(isMobile ? 'installSavyMobile' : 'installSavy')}
+			href={'/download'}
+			className="h-7 w-40"
+			openInNewTab={false}
+		/>
+		{#if isMobile}
+		<button on:click={toggleOpen}>
 			{#if dropdownOpen}
 				<div in:scale={{ duration: 300 }}>
 					<ChevronUp />
@@ -45,44 +80,14 @@
 					<List />
 				</div>
 			{/if}
-		</Button>
-		<Dropdown class="rounded-md bg-surface p-3 space-y-4">
-			<DropdownItem class="mx-4 text-lg text-on" href="#project">Project</DropdownItem>
-			<DropdownItem class="mx-4 text-lg text-on" href="#features">Features</DropdownItem>
-			<DropdownItem class="mx-4 text-lg text-on" href="#team">Team</DropdownItem>
-			<DropdownItem class="mx-4 text-lg text-on" href="#contact">Contact</DropdownItem>
-			<DropdownItem class="mx-4 text-lg text-on" href="#values">Values</DropdownItem>
+		</button>
+		<Dropdown class="bg-surface-light dark:bg-surface-dark list-none space-y-4 rounded-md p-3">
+			{#each navigations as item}
+				<DropdownItem class="mx-4 text-lg text-black dark:text-white" href={item.href}>
+					{item.name}
+				</DropdownItem>
+			{/each}
 		</Dropdown>
-	</header>
-{:else}
-	<header class="fixed z-10 mt-7 flex w-full justify-center">
-		<div
-			class="flex h-12 items-center justify-center space-x-10 rounded-lg border border-front bg-surface80 px-10 backdrop-blur-md"
-		>
-			<a href="#home">
-				<img src={Logo} alt="savy logo" class="h-7" />
-			</a>
-			<div class="h-5 w-px bg-onSurface"></div>
-			<div class="flex space-x-10">
-				<HeaderNavigation name={'Project'} route={'#project'} />
-				<HeaderNavigation name={'Features'} route={'#features'} />
-				<HeaderNavigation name={'Team'} route={'#team'} />
-				<HeaderNavigation name={'Contact'} route={'#contact'} />
-				<HeaderNavigation name={'Values'} route={'#values'} />
-			</div>
-			<div class="h-5 w-px bg-onSurface"></div>
-			<div class="flex space-x-2">
-				<div class="rounded-md p-1 transition-all mb:hover:bg-front">
-					<a href="mailto:contact@savy-ai.com">
-						<Mail class="h-6 w-6 text-on" />
-					</a>
-				</div>
-				<div class="rounded-md p-1 transition-all mb:hover:bg-front">
-					<a href="https://github.com/Savy-EIP" target="_blank">
-						<SiGithub color="#FFFFFF" />
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
-{/if}
+	{/if}
+	</div>
+</header>

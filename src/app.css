@@ -1,6 +1,28 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-*: initial;
+	--color-white: #fff;
+	--color-black: #000;
+	--color-onfront-black: #7e7e7e;
+	--color-onfront-white: #626262;
+	--color-background-dark: #181818;
+	--color-background-light: #fbfbfb;
+	--color-surface-dark: #1f1f1f;
+	--color-surface-light: #f1f1f1;
+	--color-front-dark: #2d2d2d;
+	--color-front-light: #e8e8e8;
+	--color-purple: #9c44ff;
+	--color-purple-light: #dabaff;
+	--color-purple-dark: #5e2999;
+	--color-green: #acff4a;
+	--color-blue: #00a1e4;
+	--color-yellow: #edd83d;
+	--color-orange: #fb8b24;
+	--color-red: #ff2e1a;
+}
 
 @font-face {
 	font-family: 'Vision';
@@ -17,23 +39,66 @@ html,
 body {
 	top: 0;
 	left: 0;
-	font-family: 'Helvetica', sans-serif;
-	background-color: #0e0e0e;
+	font-family: 'Outfit', 'Inter', sans-serif;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	max-width: 100%;
+
+	@apply bg-background-light text-black;
+	@apply dark:bg-background-dark dark:text-white;
 }
 
-body {
-	scrollbar-width: none;
+.vision {
+	font-family: 'Vision', sans-serif;
 }
 
-body::-webkit-scrollbar {
-	display: none;
+@layer components {
+	.square-button {
+		@apply cursor-pointer rounded-md p-2 transition-all duration-200;
+
+		@variant hover {
+			background-color: var(--color-front-light);
+			@variant dark {
+				background-color: var(--color-front-dark);
+			}
+		}
+	}
+
+	.action-button-color {
+		@apply bg-purple-light active:bg-purple-light/50 dark:bg-purple-dark dark:active:bg-purple-dark/50 hover:bg-purple-light/70 dark:hover:bg-purple-dark/70 text-black dark:text-white;
+	}
+
+	.outlined-button-color {
+		@apply border-purple-light active:border-purple-light/50 dark:border-purple-dark dark:active:border-purple-dark/50 hover:border-purple-light/70 dark:hover:border-purple-dark/70 border-2 text-black dark:text-white;
+	}
+
+	.footer-button {
+		@apply text-onfront-white dark:text-onfront-black hover:text-purple-dark dark:hover:text-purple-light text-lg md:text-sm flex items-center transition-all duration-200;
+	}
 }
 
-#app {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+@layer utilities {
+	.shape-circle {
+		border-radius: 50%;
+	}
+
+	.shape-diamond {
+		transform: rotate(45deg);
+	}
+
+	.shape-pentagon {
+		clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	}
+
+	.shape-hexagon {
+		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	}
+
+	.shape-heptagon {
+		clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+	}
+
+	.shape-octagon {
+		clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+	}
 }
