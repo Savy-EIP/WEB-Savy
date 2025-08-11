@@ -30,14 +30,16 @@
 				<div class="flex w-full justify-between space-x-4">
 					<Button
 						label={$_('installSavy')}
-						href={'https://tally.so/r/3NgW4Q'}
+						href={'/download'}
 						className="h-10 w-full"
+						openInNewTab={false}
 					/>
 					<Button
 						label={$_('discoverSavy')}
-						href={'https://tally.so/r/3NgW4Q'}
+						href={'/#solution'}
 						className="h-10 w-full"
 						colorClass="outlined-button-color"
+						openInNewTab={false}
 					/>
 				</div>
 			</div>

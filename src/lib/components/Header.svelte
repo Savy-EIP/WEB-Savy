@@ -10,7 +10,7 @@
 
 	const navigations = [
 		{ name: $_('header.solution'), href: '/#solution' },
-		{ name: $_('header.AI'), href: '/ai' },
+		// { name: $_('header.AI'), href: '/ai' },
 		{ name: $_('header.team'), href: '/team' },
 		{ name: $_('header.contact'), href: '#contact' }
 	];
@@ -65,8 +65,9 @@
 		<ButtonTheme />
 		<Button
 			label={$_(isMobile ? 'installSavyMobile' : 'installSavy')}
-			href={'https://tally.so/r/3NgW4Q'}
-			className="h-7 w-40 "
+			href={'/download'}
+			className="h-7 w-40"
+			openInNewTab={false}
 		/>
 		{#if isMobile}
 		<button on:click={toggleOpen}>
