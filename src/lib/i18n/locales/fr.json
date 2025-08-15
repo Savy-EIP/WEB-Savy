@@ -31,10 +31,10 @@
 	"speakWithEchoes": "Parler à l’écrit comme à l’oral avec une multitude d’Echos <br /> tous les plus uniques les un des autres.",
 	"echoesUnique": "Chacun avec ses propres centres d'intérêt, son caractère et son avatar.",
 	"savyCoach": {
-		"supervised": "Tous ceci encadré par votre coach personnel ",
+		"supervised": "Tout ceci encadré par votre coach personnel ",
 		"himself": "lui-même."
 	},
-	"explanationErrors": "Des explications et analyses de vos erreurs sur tous vos messages.<br />Grâce à de simples formes colorées et d’icônes.",
+	"explanationErrors": "Des explications et analyses de vos erreurs pour tous vos messages.<br />Grâce à de simples formes colorées et d’icônes.",
 	"error": {
 		"noError": "Aucune erreur",
 		"suggestion": "Suggestion",
