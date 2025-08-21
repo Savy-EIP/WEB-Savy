@@ -7,12 +7,19 @@
 				"paths": [
 					"*"
 				]
+			},
+			{
+				"appID": "92M96567K2.Savy.Savy-iOS-Dev",
+				"paths": [
+					"*"
+				]
 			}
 		]
 	},
 	"webcredentials": {
 		"apps": [
-			"92M96567K2.Savy.Savy-iOS"
+			"92M96567K2.Savy.Savy-iOS",
+			"92M96567K2.Savy.Savy-iOS-Dev"
 		]
 	}
 }
