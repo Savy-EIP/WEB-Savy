@@ -1,25 +1,25 @@
 {
-	"applinks": {
-		"apps": [],
-		"details": [
-			{
-				"appID": "92M96567K2.Savy.Savy-iOS",
-				"paths": [
-					"*"
-				]
-			},
-			{
-				"appID": "92M96567K2.Savy.Savy-iOS-Dev",
-				"paths": [
-					"*"
-				]
-			}
-		]
-	},
-	"webcredentials": {
-		"apps": [
-			"92M96567K2.Savy.Savy-iOS",
-			"92M96567K2.Savy.Savy-iOS-Dev"
-		]
-	}
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "4H7AZVN6T8.Savy.Savy-iOS",
+                "paths": [
+                    "*"
+                ]
+            },
+            {
+                "appID": "4H7AZVN6T8.Savy.Savy-iOS-Dev",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    },
+    "webcredentials": {
+        "apps": [
+            "4H7AZVN6T8.Savy.Savy-iOS",
+            "4H7AZVN6T8.Savy.Savy-iOS-Dev"
+        ]
+    }
 }
