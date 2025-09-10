@@ -42,7 +42,8 @@
 			{/if}
 			{#if !isMobileView || (isMobileView && !isAppleDevice)}
 				<a
-					href="https://play.google.com/store/apps/details?id=com.savy_ai.savy"
+					href="/apk/savy.apk"
+					download="savy.apk"
 					class="bg-green hover:bg-green/50 flex items-center justify-center space-x-2 rounded-md px-3 py-2 text-black transition duration-300 ease-in-out"
 				>
 					<SiAndroid size={16} />
