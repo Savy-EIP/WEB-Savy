@@ -1,12 +1,11 @@
 <script lang="ts">
-	import LineTitle from '$lib/components/LineTitle.svelte';
 	import { _ } from 'svelte-i18n';
-	import Antonin from './../../assets/team/antonin.png';
-	import Chris from './../../assets/team/chris.png';
-	import Luca from './../../assets/team/luca.png';
-	import Quentin from './../../assets/team/quentin.png';
-	import Terry from './../../assets/team/terry.png';
-	import Tom from './../../assets/team/tom.png';
+	import Antonin from './../../assets/team/antonin.webp';
+	import Chris from './../../assets/team/chris.webp';
+	import Luca from './../../assets/team/luca.webp';
+	import Quentin from './../../assets/team/quentin.webp';
+	import Terry from './../../assets/team/terry.webp';
+	import Tom from './../../assets/team/tom.webp';
 	import LongCard from '$lib/components/LongCard.svelte';
 	import Line from '$lib/components/Line.svelte';
 
@@ -29,7 +28,7 @@
 			name: 'Luca',
 			image: Luca,
 			linkedin: 'https://www.linkedin.com/in/luca-deltort/',
-			github: 'https://github.com/StEgo2103',
+			github: 'https://github.com/LucaDeltort',
 			website: 'https://deltort.net'
 		},
 		{
@@ -56,7 +55,7 @@
 	];
 </script>
 
-<div class="mx-4 md:mx-32 flex h-auto mb-12 md:h-screen w-auto flex-col items-center pt-32">
+<div class="mx-4 mb-12 flex h-auto w-auto flex-col items-center pt-32 md:mx-32 md:h-screen">
 	<h4 class="w-full text-3xl md:text-4xl">{$_('discoverTeam')}</h4>
 	<Line />
 	<div class="flex w-full flex-wrap justify-center gap-10 pt-8">
@@ -66,10 +65,10 @@
 					<img src={member.image} alt={member.name} class="h-28" />
 					<div class="flex h-full flex-col items-start justify-between py-4">
 						<div class="flex flex-col items-start">
-							<h5 class="text-xl md:text-lg font-semibold">{member.name}</h5>
+							<h5 class="text-xl font-semibold md:text-lg">{member.name}</h5>
 							<h5 class="text-xl font-light">{$_(`team.${member.name}`)}</h5>
 						</div>
-						<div class="flex gap-2 pt-2 underline text-lg md:text-sm">
+						<div class="flex gap-2 pt-2 text-lg underline md:text-sm">
 							<a href={member.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
 							<a href={member.github} target="_blank" rel="noopener noreferrer">GitHub</a>
 							{#if member.website}
